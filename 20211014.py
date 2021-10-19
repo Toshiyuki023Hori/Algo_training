@@ -28,3 +28,6 @@ def make_divisors(n):
  
 divisor_list = make_divisors(greatest_common_divisor)
 print(divisor_list[-k])
+
+# 最大公約数は、ユークリッドの互除法を使って解くこともできるから、
+# python でのその処理の書き方はまた別途調べてください
