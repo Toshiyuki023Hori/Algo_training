@@ -21,3 +21,10 @@ for i in range(int(n) - 2):
     else :
         continue
 print(count)
+
+
+## 別解
+n = int(input())
+s = input()
+
+print(s.count("ABC"))o
