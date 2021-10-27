@@ -1,8 +1,9 @@
 # https://atcoder.jp/contests/abc036/tasks/abc036_c
 
 # 座標圧縮
-# 数列 A0,A1,…,AN−1 が与えられたときに、それぞれの要素が「全体の中で何番目に小さいか」を求めていく作業
+    # 数列 A0,A1,…,AN−1 が与えられたときに、それぞれの要素が「全体の中で何番目に小さいか」を求めていく作業
 # 要は大小関係だけを抽出したい
+# 参考: https://algo-logic.info/coordinate-compress/
 
 
 N = int(input())
