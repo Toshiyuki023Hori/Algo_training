@@ -19,3 +19,26 @@ print(count)
 # ===========================================
 
 # https://atcoder.jp/contests/sumitrust2019/tasks/sumitb2019_b
+
+# 小数点以下切り捨て
+# 複数考えられる => n/1.08の切り捨てで出た答えを保存
+# 保存した数字の+=1 分の数字を *1.08 して n になるかチェック
+
+import math
+n = int(input())
+floor_n = math.floor(n / 1.08)
+ceil_n = math.ceil(n / 1.08)
+is_success = False
+for i in range(floor_n - 1, floor_n + 1):
+    if math.floor(i * 1.08) == n:
+        print(i)
+        is_success = True
+        break
+if not is_success:
+    for i in range(ceil_n - 1, ceil_n + 1):
+        if math.floor(i * 1.08) == n:
+            print(i)
+            is_success = True
+            break
+if not is_success:
+    print(':(')
