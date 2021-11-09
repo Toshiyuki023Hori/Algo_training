@@ -3,6 +3,7 @@
 
 a_price, b_price, mix_price, a_slices, b_slices = map(int, input().split())
 
+# 1e5 みたいなのを"数値リテラル"という
 min_price = 2 * 5000 * int(1e5)
 # a + b < 2 mix => a, bを一枚ずつ買う方がお得
 # a + b > 2 mix => mixを二枚買う方がお得
@@ -32,3 +33,15 @@ else:
 # ==== 
 # 下記が枝刈り全探索ver
 # ====
+
+# 金額A,B,Cのパターン全探索すると時間がかかる。ABCXYを数式化してみよう。ABピザの枚数をZ枚として、、、
+# A(X-Z)+B(Y-Z)+2CZ
+# 2CZ=AZ+BZなのでAXとBYから引いてあげれば帳尻が合う。
+
+A, B, C, X, Y = map(int, input().split())
+ans = 2*(5000*10**5)
+for Z in range(10**5+1):
+    total = A*max(X-Z, 0)+B*max(Y-Z, 0)+2*C*Z
+    ans = min(total,ans)
+print(ans)
+
