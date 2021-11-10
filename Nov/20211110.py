@@ -26,4 +26,3 @@ total_seconds = 0
 for item_place in item_places_array:
     total_seconds += abs(enter_num - item_place[0]) + abs(exit_num - item_place[1]) + abs(item_place[0] - item_place[1])
 print(total_seconds)
-
