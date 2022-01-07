@@ -2,3 +2,4 @@
 210*.py
 plan.md
 .DS_Store
+.ccls-cache/*
